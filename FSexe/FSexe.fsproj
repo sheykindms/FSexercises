@@ -8,6 +8,7 @@
     <ItemGroup>
         <Compile Include="Exercise1.fs" />
         <Compile Include="Exercise2.fs" />
+        <Compile Include="Exercise3.fs" />
     </ItemGroup>
 
 </Project>
