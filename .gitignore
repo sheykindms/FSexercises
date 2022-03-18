@@ -253,12 +253,14 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+*.sln
 /.idea.FSexe.iml
 /modules.xml
 /contentModel.xml
 /projectSettingsUpdater.xml
 obj
 bin
+packages
 
 # Coverage Report
 MyProject_coverage.xml
