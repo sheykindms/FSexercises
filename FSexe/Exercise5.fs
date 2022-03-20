@@ -1,7 +1,7 @@
 // 16.1
 let notDivisible =
     function
-    | (number, divider) -> number % divider = 0
+    | (divider, number) -> number % divider = 0
 
 // 16.2
 let prime n =
