@@ -1,8 +1,8 @@
 // 20.3.1
-let vat n x = x + x * n / 100.0
+let vat (n:int) (x:float) = x + x * (float)n / (float)100
 
 // 20.3.2
-let unvat n x = x * 100.0 / (100.0 + n)
+let unvat (n:int) (x:float) = x * (float)100 / (float)(100 + n)
 
 // 20.3.3
 let rec min f =
