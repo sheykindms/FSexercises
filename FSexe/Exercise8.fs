@@ -1,5 +1,3 @@
-let curry f (x: int) = fun (y: int) -> f (x, y): int
+let curry f = fun x y -> f (x, y)
 
-let uncurry (f: int) (x: int) (y: int) =
-    function
-    | (x: int), (y: int) -> f: int
+let uncurry f = fun (x, y) -> f x y
