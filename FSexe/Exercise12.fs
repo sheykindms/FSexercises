@@ -10,10 +10,11 @@ let rec dnto =
     | 1 -> [ 1 ]
     | n -> n :: dnto (n - 1)
 
-
 // 34.3
-let evenn n =
-    [ for i in 0 .. n do
-          if i % 2 = 0 then yield i ]
+let evenn =
+    fun n ->
+        [ for i in 0 .. n do
+              if i % 2 = 0 then yield i ]
+
     
-//printf $"{evenn 17}"
+//printf $"{evenn 77}"
