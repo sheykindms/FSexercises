@@ -17,6 +17,7 @@
 	    <Compile Include="Exercise9.fs" />
 	    <Compile Include="Exercise10.fs" />
 	    <Compile Include="Exercise11.fs" />
+	    <Compile Include="Exercise12.fs" />
     </ItemGroup>
 
 </Project>
