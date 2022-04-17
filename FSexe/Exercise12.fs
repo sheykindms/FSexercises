@@ -13,8 +13,7 @@ let rec dnto =
 // 34.3
 let evenn =
     fun n ->
-        [ for i in 0 .. n do
+        [ for i in 0 .. n * 2 do
               if i % 2 = 0 then yield i ]
 
-    
 //printf $"{evenn 77}"
