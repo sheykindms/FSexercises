@@ -2,20 +2,20 @@
 let rec rmodd =
     function
     | [] -> []
-    | [ x ] -> []
-    | x :: xx :: xxs -> [ xx ] @ rmodd xxs
+    | [ _ ] -> []
+    | _ :: xx :: xxs -> [ xx ] @ rmodd xxs
 
 // 39.2
 let rec del_even =
     function
     | [] -> []
     | x :: xs when (x % 2 <> 0) -> [ x ] @ del_even xs
-    | x :: xs -> del_even xs
+    | _ :: xs -> del_even xs
 
 // 39.3
 let rec multiplicity n ns =
     match n, ns with
-    | n, [] -> 0
+    | _, [] -> 0
     | n, x :: xs when n = x -> 1 + multiplicity n xs
     | n, x :: xs when n <> x -> multiplicity n xs
 
