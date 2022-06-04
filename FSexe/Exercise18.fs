@@ -19,15 +19,15 @@ let fibo n =
     elif (n = 1) then
         1
     else
-        let mutable elemN2 = ref 0
-        let mutable elemN1 = ref 1
+        let mutable a = ref 0
+        let mutable b = ref 1
         let mutable index = ref 2
         let mutable result = ref 0
 
         while index.Value <= n do
-            result.Value <- elemN2.Value + elemN1.Value
-            elemN2.Value <- elemN1.Value
-            elemN1.Value <- result.Value
+            result.Value <- a.Value + b.Value
+            a.Value <- b.Value
+            b.Value <- result.Value
             index.Value <- index.Value + 1
 
         result.Value
