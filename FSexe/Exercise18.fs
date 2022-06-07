@@ -3,14 +3,14 @@ let f n =
     if n < 2 then
         1
     else
-        let mutable index = ref 1
-        let mutable result = ref 1
+        let mutable index = 1
+        let mutable result = 1
 
-        while index.Value <= n do
-            result.Value <- result.Value * index.Value
-            index.Value <- index.Value + 1
+        while index <= n do
+            result <- result * index
+            index <- index + 1
 
-        result.Value
+        result
 
 // 47.4.2 Напишите функцию fibo: int -> int, где fibo(n) вычисляет n-е число Фибоначчи (n >= 0), не используя рекурсию, с помощью императивных возможностей.
 let fibo n =
@@ -19,15 +19,14 @@ let fibo n =
     elif (n = 1) then
         1
     else
-        let mutable a = ref 0
-        let mutable b = ref 1
-        let mutable index = ref 2
-        let mutable result = ref 0
+        let mutable a = 0
+        let mutable b = 1
+        let mutable index = 2
+        let mutable result = 0
 
-        while index.Value <= n do
-            result.Value <- a.Value + b.Value
-            a.Value <- b.Value
-            b.Value <- result.Value
-            index.Value <- index.Value + 1
-
-        result.Value
+        while index <= n do
+            result <- a + b
+            a <- b
+            b <- result
+            index <- index + 1
+        result
