@@ -2,7 +2,7 @@
 let fac_seq =
     let rec fact n acc =
         seq {
-            if n <= 1 then yield 1 else yield n
+            if n <= 1 then yield 1 else yield acc
             yield! fact (n + 1) (acc * (n + 1))
         }
 
