@@ -1,6 +1,9 @@
 // 49.5.1 Определите последовательность чётных положительных чисел.
 let even_seq =
-    Seq.where (fun x -> x % 2 = 0) (Seq.initInfinite id)
+    let isEven n =
+        n % 2 = 0
+        
+    Seq.initInfinite id |> Seq.filter isEven
     
 
 // 49.5.2 Определите последовательность факториалов неотрицательных целых чисел 1,1,2,6,...,n!
