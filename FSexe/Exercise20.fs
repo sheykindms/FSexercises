@@ -1,14 +1,13 @@
 // 49.5.1 Определите последовательность чётных положительных чисел.
-let even_seq =
-    let isEven n =
-        n % 2 = 0
-        
-    Seq.initInfinite id |> Seq.filter isEven
-    
+let even_seq = Seq.initInfinite (fun x -> (x + 1) * 2)
 
 // 49.5.2 Определите последовательность факториалов неотрицательных целых чисел 1,1,2,6,...,n!
 let fac_seq =
-    let rec fact n =  [1..n] |> List.reduce (*)
+    let rec fact n =
+        match n with
+        | 0 -> 1
+        | 1 -> 1
+        | _ -> n * fact (n - 1)
 
     Seq.initInfinite fact
 
